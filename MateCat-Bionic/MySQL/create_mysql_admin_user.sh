@@ -20,8 +20,6 @@ echo "=> Creating MySQL admin user with ${_word} password"
 
 mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
-mysql -uroot -e "CREATE USER 'admin'@'172.18.0.0/255.255.255.0' IDENTIFIED BY '$PASS'"
-mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'172.18.0.0/255.255.255.0' WITH GRANT OPTION"
 mysql -uroot -e "FLUSH PRIVILEGES"
 
 echo "=> Done!"
