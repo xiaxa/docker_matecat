@@ -55,8 +55,8 @@ services:
     volumes:
       - /Users/albertomassidda/matecat_local_storage:/var/www/matecat/local_storage:rw
     ports:
-      - 80:80
-      - 443:443
+      - 8080:80
+      - 8443:443
       - 7788:7788
     networks:
        - matecat-network
